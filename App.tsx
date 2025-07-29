@@ -1,20 +1,52 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Image } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+
+//function App() {
+//  return (
+//    <View>
+//      <Text> 
+//        Disciplina de Dispositivos Móveis
+//      </Text>
+//    </View>
+//  );
+//}
+
+class App extends Component {
+  render() {
+    let nome = 'IFPR'
+    return (
+      <View> 
+        <Text>
+          Hello World!
+        </Text>
+        <Text style=
+        {{
+          color: 'red',
+          fontSize: 50,
+          margin: 15
+        }}
+        > 
+        Desenvolvedor  
+        </Text>
+
+        <Text 
+        style={{
+          fontSize: 30,
+        }}
+        > 
+        {nome}        
+        </Text>
+        <Image
+        source={{uri: 'https://www.pudim.com.br/pudim.jpg'}}
+        style={{width: 300, height: 300}}
+        >
+
+        </Image>
+      </View>
+      );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
